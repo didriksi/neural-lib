@@ -18,6 +18,7 @@ if __name__ == '__main__':
 	dataframes = []
 	langlist = ['english', 'norwegian']
 	for language in langlist:
+		# This only works if you have csv-files with words in the languages you want, in datasets/
 		wordData = pd.read_csv('datasets/' + language + '.csv')
 		wordData[language] = 1
 		dataframes.append(wordData)
