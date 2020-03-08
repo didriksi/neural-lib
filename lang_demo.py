@@ -19,7 +19,7 @@ def RELU_diff(z):
 
 def get_datasets(file, training_part):
 	"""Retrieves dataset and returns training and test set."""
-	wordData = pd.read_csv(file + '.csv')
+	wordData = pd.read_csv('https://rusommer.no/nevralt/' + file + '.csv')
 
 	train_set = wordData.sample(frac=training_part)
 	test_set = wordData.drop(train_set.index)
